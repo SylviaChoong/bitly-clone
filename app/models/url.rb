@@ -1,4 +1,11 @@
 class Url < ActiveRecord::Base
+	# Any non-empty string
+	# Any non-empty string that starts with "http://" or "https:/"
+	# Any string that the Ruby URI module says is valid
+	# Any URL-looking which responds to a HTTP request
+	validates :long_url, presence: true
+	validates :long_url, format: { with: /https?:\/\/[\S]+/ }
+
 	# This is Sinatra! Remember to create a migration!
 	before_create :shorten
 	def shorten
