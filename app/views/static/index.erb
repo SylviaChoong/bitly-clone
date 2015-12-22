@@ -1,2 +1,22 @@
-<h1>Hello World</h1>
-<p>See Me in views/static/index.html.erb</p>
+<form action = "/urls" method = "post">
+	Enter URL : 
+	<input type = "text" name = "long_url">
+	<input type = "submit" value = "Submit">
+</form>
+
+<!-- Print each long urls in your database 
+<% @urls.each do |url| %>
+	<a href="<%= url.long_url %>"><p><%= url.long_url %></p></a>
+<% end %>
+-->
+
+<!-- Print each short urls in your database -->
+<% @urls.each do |url| %>
+	<p>http://localhost:9393/<%= url.short_url %></p>
+<% end %>
+
+<!-- form action = "/short" method = "post">
+	Enter URL : 
+	<input type = "text" name = "short_url">
+	<input type = "submit" value = "Submit">
+</form> -->
