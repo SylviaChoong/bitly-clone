@@ -14,8 +14,8 @@ $(document).ready(function(){
 	});
 
 	$(".form-inline").submit(function(e) {
-	    $('.score downvoted').show()
-	    $('.score unvoted').hide()
+	    // $('.score downvoted').show()
+	    // $('.score unvoted').hide()
 	    $.ajax({
 	           method: "POST",
 	           url: '/urls',
@@ -23,13 +23,18 @@ $(document).ready(function(){
 	           success: function(data)
 	           {
 
-	           	$('#url_table tr:last').after(data)
+	           	$('#url_table tr:first').after(data)
 
 	           }
 	    });
 	    
     	e.preventDefault(); // avoid to execute the actual submit of the form.
 	});
+
+    $('.counter').counterUp({
+        delay: 50,
+        time: 5000
+    });
 });
 
 

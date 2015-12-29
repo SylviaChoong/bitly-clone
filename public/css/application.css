@@ -1,7 +1,20 @@
 body {
   font: 400 15px Lato, sans-serif;
   line-height: 1.8;
-  color: #818181;
+  background-color: #D9FFE8;
+  color:#203343;
+}
+
+a {
+  color: #175f4d;
+}
+
+.row {
+  color:#175f4d;
+}
+
+.row h4 {
+  color:#203343;
 }
 
 h2 {
@@ -20,7 +33,11 @@ h4 {
 }
 
 .jumbotron {
-  background-color: #f4511e;
+  -webkit-animation: animation 30s ease infinite;
+  -moz-animation: animation 30s ease infinite;
+  animation: animation 30s ease infinite;
+  background: linear-gradient(270deg, #04072b, #175f4d, #203343, #0c7258);
+  background-size: 800% 800%;
   color: #fff;
   padding: 100px 25px;
   font-family: Montserrat, sans-serif;
@@ -58,15 +75,16 @@ h4 {
 
 .carousel-control.right, .carousel-control.left {
   background-image: none;
-  color: #f4511e;
+  color: #a7a7a7;
+  margin: 0px 0px 70px;
 }
 
 .carousel-indicators li {
-  border-color: #f4511e;
+  border-color: #a7a7a7;
 }
 
 .carousel-indicators li.active {
-  background-color: #f4511e;
+  background-color: #a7a7a7;
 }
 
 .item h4 {
@@ -74,7 +92,8 @@ h4 {
   line-height: 1.375em;
   font-weight: 400;
   font-style: italic;
-  margin: 70px 0;
+  margin: 0px 0px 80px;
+  color:white;
 }
 
 .item span {
@@ -129,7 +148,7 @@ h4 {
 
 .navbar {
   margin-bottom: 0;
-  background-color: #f4511e;
+  background-color: #D9534F;
   z-index: 9999;
   border: 0;
   font-size: 12px !important;
@@ -144,7 +163,7 @@ h4 {
 }
 
 .navbar-nav li a:hover, .navbar-nav li.active a {
-  color: #f4511e !important;
+  color: #D9534F !important;
   background-color: #fff !important;
 }
 
@@ -156,7 +175,6 @@ h4 {
 footer .glyphicon {
   font-size: 20px;
   margin-bottom: 20px;
-  color: #f4511e;
 }
 
 .slideanim {visibility:hidden;}
@@ -209,7 +227,7 @@ footer .glyphicon {
  }
 
 table,tr,td,th{
-	border: 1px solid #f4511e;
+	border: 1px solid #04072b;
 }
 
 table {
@@ -223,7 +241,7 @@ td, th {
 
 th {
 	text-transform: uppercase;
-	color:#f4511e;
+	color:#203343;
 }
 
 /*pop up instructions*/
@@ -265,4 +283,20 @@ th {
   margin-top: 400px;
   margin-left: 50px;
   padding:40px 30px;
+}
+
+@-webkit-keyframes animation {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes animation {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes animation { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
 }
