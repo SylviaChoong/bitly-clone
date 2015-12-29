@@ -225,3 +225,44 @@ th {
 	text-transform: uppercase;
 	color:#f4511e;
 }
+
+/*pop up instructions*/
+#overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+
+.modal {
+  z-index: 999;
+  display: none; 
+  height: 200px; 
+  width: 300px;
+  background-color:black;
+  padding:20px 30px;
+  font-size: 14px;
+  border-radius:14px;
+  border-color: white;
+  border-style: solid;
+  color:white;
+  position: fixed;
+  right: auto;
+  left: 10px;
+}
+
+#modal1 {
+  margin-top: 100px;
+  margin-left: 50px;
+}
+
+#modal2 {
+  width: 350px;
+  margin-top: 400px;
+  margin-left: 50px;
+  padding:40px 30px;
+}

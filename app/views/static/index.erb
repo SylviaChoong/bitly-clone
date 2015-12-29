@@ -1,6 +1,13 @@
 <div class="jumbotron text-center">
   	<h2>UNLEASH THE POWER OF THE LINK</h2>
   	<% if @errors %><%= @errors %><% end %>
+    <div class="modal" id="modal1">
+      <a class="close" title="Close"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2hpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDoxQjMyNTVFNDJBMjA2ODExODIyQUZFMjk0OTQzNjg3OSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpGQTFBNUY4MTg4MjkxMUUyQkU5RUQ2N0I1NTA1Q0M5OSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpGQTFBNUY4MDg4MjkxMUUyQkU5RUQ2N0I1NTA1Q0M5OSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M2IChNYWNpbnRvc2gpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MUIzMjU1RTQyQTIwNjgxMTgyMkFGRTI5NDk0MzY4NzkiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MUIzMjU1RTQyQTIwNjgxMTgyMkFGRTI5NDk0MzY4NzkiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4t/1PRAAAA0ElEQVR42pySQQ6CQAxFG2SrOzmAB/AgmujGWWniXsFLeAM9gHfQgwiJC68hrmBB/U1KHBsMyk8eGWZ+W6aUmJk8IrAHKSiUVPci3+sHLUDO3yVnzgZKUMXtqtRL9efl/LvEOwyIKAF9emsKdoAVWU+8c/EmIR4z+tQIHMED9MAJbI1nTto5e4+117RVw/2LgNoVNuyVkjEz2TZaaanVZB0bz1WyncHYy3YHMTjo+wDcTMVL198R1Q1wfwyAsyPnuoycHXJpWAme0oimIX8JMABhBwskdJzIBAAAAABJRU5ErkJggg=="/></a>
+      <h1>Start Here</h1>
+      <p style="color:#838383;">Copy a long url and paste here.</p>
+      <a class="inst_next_btn">Next ></a>
+    </div>
+
     <form class="form-inline" action = "/urls" method = "post">
       Enter URL : 
       <input type = "text" class="form-control" size="50" name = "long_url">
@@ -12,7 +19,7 @@
 <div id="about" class="container-fluid">
   <div class="row">
     <div class="col-sm-12">
-    	<table>
+    	<table id = "url_table">
 	  	  <tr>
 			    <th>Generated URL</th>
 			    <th>Num of Clicks</th>
@@ -26,6 +33,11 @@
 			  </tr>
 		
 				<% end %>
+        <div class="modal" id="modal2">
+          <a class="close" title="Close"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2hpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDoxQjMyNTVFNDJBMjA2ODExODIyQUZFMjk0OTQzNjg3OSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpGQTFBNUY4MTg4MjkxMUUyQkU5RUQ2N0I1NTA1Q0M5OSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpGQTFBNUY4MDg4MjkxMUUyQkU5RUQ2N0I1NTA1Q0M5OSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M2IChNYWNpbnRvc2gpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MUIzMjU1RTQyQTIwNjgxMTgyMkFGRTI5NDk0MzY4NzkiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MUIzMjU1RTQyQTIwNjgxMTgyMkFGRTI5NDk0MzY4NzkiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4t/1PRAAAA0ElEQVR42pySQQ6CQAxFG2SrOzmAB/AgmujGWWniXsFLeAM9gHfQgwiJC68hrmBB/U1KHBsMyk8eGWZ+W6aUmJk8IrAHKSiUVPci3+sHLUDO3yVnzgZKUMXtqtRL9efl/LvEOwyIKAF9emsKdoAVWU+8c/EmIR4z+tQIHMED9MAJbI1nTto5e4+117RVw/2LgNoVNuyVkjEz2TZaaanVZB0bz1WyncHYy3YHMTjo+wDcTMVL198R1Q1wfwyAsyPnuoycHXJpWAme0oimIX8JMABhBwskdJzIBAAAAABJRU5ErkJggg=="/></a>
+          <h1>Find your link here.</h1>
+          <p style="color:#838383;">Long URL becomes short URL.</p>
+        </div>
 			</table>
     </div>
   </div>
