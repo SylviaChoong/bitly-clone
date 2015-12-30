@@ -15,7 +15,7 @@ class Url < ActiveRecord::Base
 
 	def generate_code
 		set = Array('A'..'Z') + Array('a'..'z') + Array('1'..'9')
-		@code = Array.new(7){set.sample}.join
+		@code = Array.new(6){set.sample}.join
 	end
 end
 

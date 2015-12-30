@@ -21,6 +21,9 @@ require "sinatra/reloader" if development?
 require 'erb'
 require 'uri'
 require 'byebug'
+
+	# random numbers and alphabets
+require 'securerandom'
 ######################################################################
 
 
