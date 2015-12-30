@@ -31,6 +31,11 @@ $(document).ready(function(){
     	e.preventDefault(); // avoid to execute the actual submit of the form.
 	});
 
+	//another ajax method
+	//$("#banana").submit(function(event){
+	//	event.preventDefault();
+	//});
+
     $('.counter').counterUp({
         delay: 50,
         time: 5000
