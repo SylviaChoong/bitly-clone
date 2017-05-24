@@ -1,8 +1,10 @@
+# Bitly-clone
 Clone of bitly website. Function as aURL Shortener.<br/><br/>
 
 Run bundle install to install dependencies.<br/>
 Create database with bundle exec rake db:create and bundle exec rake db:migrate<br/>
 Run server bundle exec rake server<br/>
+Browser URL: localhost:9393<br/>
 
 ## References
 1. http://www.blacktm.com/talks/building_web_apps_with_rack_and_sinatra/#simple_rack
